@@ -8,6 +8,10 @@ export default class CuahuitlDOM{
         this.validator = new Validator();
     }
 
+    isInDOM(query: string): boolean{
+        return this.validator.isValidElement(document.querySelector(query));
+    }
+
     findAndThen(query: string, success: any, fail: any): any{
         const element = document.querySelector(query);
         const isValid = this.validator.isValidElement(element);

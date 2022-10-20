@@ -26,6 +26,10 @@ Attempt to find a DOM element using the supplied query, if this element is found
 
 Optionally you can pass a fail callback in case of the element is not found.
 
+    isInDOM(query string): boolean;
+
+Check if the element is found in the DOM, then returns a boolean value.
+
 ## Usage ##
 
     import {CuahuitlDOM} from '@makechtec/cuahuitl';

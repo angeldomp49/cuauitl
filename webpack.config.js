@@ -6,13 +6,16 @@ module.exports = {
     entry: "./src/index.ts",
     output: {
         filename: "index.js",
-        path: path.resolve(__dirname)
+        path: path.resolve(__dirname),
+        library:{
+            type: "commonjs-static",
+        }
     },
     module:{
         rules: [
             {
                 test: /\.(ts)$/,
-                use: "ts-loader",
+                use: "babel-loader",
                 exclude: /node_modules/ 
             }
         ],
@@ -20,7 +23,7 @@ module.exports = {
     resolve: {
         extensions: [".ts"]
     },
-    target: "node",
+    target: "web",
     plugins: [
         new BundleDeclarationsWebpackPlugin()
     ]

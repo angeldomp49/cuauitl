@@ -1,7 +1,2 @@
-import CuahuitlDOM from "./CuahuitlDOM";
-import Validator from "./Validator";
-
-export {
-    Validator,
-    CuahuitlDOM
-};
+export {default as CuahuitlDOM} from "./CuahuitlDOM";
+export {default as Validator} from "./Validator";

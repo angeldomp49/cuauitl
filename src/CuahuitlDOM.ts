@@ -1,6 +1,6 @@
 import Validator from './Validator';
 
-export class CuahuitlDOM{
+export default class CuahuitlDOM{
 
     validator: Validator;
 
@@ -14,8 +14,10 @@ export class CuahuitlDOM{
         if(this.validator.isValidElement(element)){
             return element;
         }
-        else{
+
+        if(this.validator.isValidElement(callback)){
             callback();
         }
+
     }
 }

@@ -20,11 +20,11 @@ Constructor:
 
 Methods:
 
-    findAndThen( query: string, callback: any ) : any;
+    findAndThen( query: string, success: any, fail: any ) : any;
 
-attempt to find a DOM element using the supplied query, if this element is found then it will call the callback.
+Attempt to find a DOM element using the supplied query, if this element is found then it will call the success. Also pass the element as param.
 
-Also pass the element as param.
+Optionally you can pass a fail callback in case of the element is not found.
 
 ## Usage ##
 
@@ -32,4 +32,4 @@ Also pass the element as param.
 
     const dom = new CuahuitlDOM();
     
-    dom.findAndThen("#root", (element) => console.log(element.textNode));
+    dom.findAndThen("#root", (element) => console.log(element.textNode), () => console.log("not found element"));

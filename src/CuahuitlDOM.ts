@@ -8,15 +8,13 @@ export default class CuahuitlDOM{
         this.validator = new Validator();
     }
 
-    findOr(query: string, callback: any): any{
+    findAndThen(query: string, callback: any): any{
         const element = document.querySelector(query);
+        const isValid = this.validator.isValidElement(element);
+        const isCallback = this.validator.isValidElement(callback);
 
-        if(this.validator.isValidElement(element)){
-            return element;
-        }
-
-        if(this.validator.isValidElement(callback)){
-            callback();
+        if(isValid && isCallback){
+            return callback(element);
         }
 
     }

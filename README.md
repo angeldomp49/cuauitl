@@ -20,6 +20,16 @@ Constructor:
 
 Methods:
 
-    findOr( query: string, callback: any ) : any;
+    findAndThen( query: string, callback: any ) : any;
 
-attempt to find a DOM element using the supplied query, if this element is not found then it will call the callback.
+attempt to find a DOM element using the supplied query, if this element is found then it will call the callback.
+
+Also pass the element as param.
+
+## Usage ##
+
+    import {CuahuitlDOM} from '@makechtec/cuahuitl';
+
+    const dom = new CuahuitlDOM();
+    
+    dom.findAndThen("#root", (element) => console.log(element.textNode));

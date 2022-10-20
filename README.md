@@ -30,6 +30,10 @@ Optionally you can pass a fail callback in case of the element is not found.
 
 Check if the element is found in the DOM, then returns a boolean value.
 
+    find(query string): any;
+
+Same as document.querySelector().
+
 ## Usage ##
 
     import {CuahuitlDOM} from '@makechtec/cuahuitl';

@@ -9,11 +9,15 @@ export default class CuahuitlDOM{
     }
 
     isInDOM(query: string): boolean{
-        return this.validator.isValidElement(document.querySelector(query));
+        return this.validator.isValidElement(this.find(query));
+    }
+
+    find(query: string): any{
+        return document.querySelector(query);
     }
 
     findAndThen(query: string, success: any, fail: any): any{
-        const element = document.querySelector(query);
+        const element = this.find(query);
         const isValid = this.validator.isValidElement(element);
         const isCallback = this.validator.isValidElement(success);
         const isFail = this.validator.isValidElement(fail);

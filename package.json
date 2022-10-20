@@ -1,0 +1,12 @@
+{
+  "name": "@makechtec/cuahuitl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm t",
+    "compile" : "tsc && terser prebuild/Validator.js prebuild/CuahuitlDOM.js -o index.js -m"
+  },
+  "author": "MakechTec",
+  "license": "MIT"
+}

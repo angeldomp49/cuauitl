@@ -30,9 +30,13 @@ Optionally you can pass a fail callback in case of the element is not found.
 
 Check if the element is found in the DOM, then returns a boolean value.
 
-    find(query string): any;
+    find(query string): HTMLElement | null;
 
 Same as document.querySelector().
+
+    nodeByQuery(query string): HTMLElement | null;
+
+Returns a Node object.
 
 ## Usage ##
 
@@ -41,3 +45,22 @@ Same as document.querySelector().
     const dom = new CuahuitlDOM();
     
     dom.findAndThen("#root", (element) => console.log(element.textNode), () => console.log("not found element"));
+
+
+## Node class ##
+
+Constructor: 
+
+    new Node(query: string);
+
+The query descriptor.
+
+Methods:
+
+    isInDOM(): boolean;
+
+Same as CuahuitlDOM but use the same query descriptor.
+
+    getElement();
+
+Same as CuahuitlDOM.find but use the same query descriptor.

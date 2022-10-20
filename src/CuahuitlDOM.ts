@@ -1,4 +1,5 @@
 import Validator from './Validator';
+import Node from './Node';
 
 export default class CuahuitlDOM{
 
@@ -12,7 +13,7 @@ export default class CuahuitlDOM{
         return this.validator.isValidElement(this.find(query));
     }
 
-    find(query: string): any{
+    find(query: string): HTMLElement | null{
         return document.querySelector(query);
     }
 
@@ -31,5 +32,9 @@ export default class CuahuitlDOM{
             }
         }
 
+    }
+
+    nodeByQuery(query: string) :Node{
+        return new Node(query);
     }
 }

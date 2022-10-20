@@ -64,3 +64,57 @@ Same as CuahuitlDOM but use the same query descriptor.
     getElement();
 
 Same as CuahuitlDOM.find but use the same query descriptor.
+
+## Usage ##
+
+    import {Node} from '@makechtec/cuahuitl';
+
+    const title = new Node("#title1");
+
+    if(title.isInDOM()){
+        console.log(title.getElement());
+    }
+
+## Viewport class ##
+
+Constructor:
+
+    new Viewport();
+    new Viewport( breakpoints: Array<Breakpoint> );
+
+Methods:
+
+    addBreakpoint( breakpoint: BreakPoint ): Viewport;
+
+    removeBreakpointByName( name: string ): Viewport;
+
+Add or return breakpoints, then returns the same Viewport instance.
+
+    currentBreakpoint(): Breakpoint;
+
+Measure the window.innertWidth and returns the breakpoint which corresponds.
+
+## Breakpoint class ##
+
+Constructor:
+
+    new Breakpoint();
+    new Breakpoint(minWidth: number, maxWidth: number, name: string);
+
+As you can see the information is the min and max width in pixels. Also the name to be identified.
+
+## Usage ##
+
+    import {Viewport, Breakpoint} from '@makechtec/cuahuitl';
+
+    const breakpoints = [
+        new Breakpoint( 0, 769, "small" ),
+        new Breakpoint( 770, 960, "medium" ),
+        new Breakpoint( 961, 2000, "large" )
+    ];
+
+    const viewport = new Viewport(breakpoints);
+
+    if(viewport.currentBreakpoint().name == "small"){
+        console.log("this is mobile");
+    }

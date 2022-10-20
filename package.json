@@ -8,5 +8,9 @@
     "compile" : "tsc && terser prebuild/Validator.js prebuild/CuahuitlDOM.js -o index.js -m"
   },
   "author": "MakechTec",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angeldomp49/cuauitl"
+  }
 }

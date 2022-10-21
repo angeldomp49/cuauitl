@@ -2,7 +2,17 @@ export declare class BreakPoint {
 	minWidth: number;
 	maxWidth: number;
 	name: string;
-	constructor(minWidth: number, maxWidth: number, name: string);
+	constructor(minWidth?: number, maxWidth?: number, name?: string);
+}
+export declare class ClassListWrapper {
+	private validator;
+	private container;
+	private customDocument;
+	constructor(classInStringFormat: string, customDocument: any);
+	classList(): DOMTokenList;
+	private fromString;
+	private createElement;
+	private classesToArray;
 }
 export declare class CuahuitlDOM {
 	validator: Validator;
@@ -22,6 +32,7 @@ export declare class Node {
 }
 export declare class Validator {
 	isValidElement(element: any): boolean;
+	isEmpty(str: string): boolean;
 }
 export declare class Viewport {
 	private breakpoints;

@@ -1,6 +1,10 @@
 
-export default class Validator{
+export class Validator{
     isValidElement(element: any): boolean{
-        return element !== undefined && element !== null;
+        return (typeof element != "undefined") && undefined != element && element != null;
+    }
+
+    isEmpty(str: string): boolean{
+        return str.trim() === "" || str.trim().length === 0;
     }
 }

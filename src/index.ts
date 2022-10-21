@@ -1,4 +1,5 @@
-export {default as CuahuitlDOM} from "./CuahuitlDOM";
-export {default as Validator} from "./Validator";
-export {default as Node} from "./Node";
+export {CuahuitlDOM} from "./CuahuitlDOM";
+export {Validator} from "./Validator";
+export {Node} from "./Node";
 export {Viewport, BreakPoint} from "./Viewport";
+export {ClassListWrapper} from "./ClassListWrapper";

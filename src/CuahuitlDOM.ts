@@ -1,7 +1,7 @@
-import Validator from './Validator';
-import Node from './Node';
+import {Validator} from './Validator';
+import {Node} from './Node';
 
-export default class CuahuitlDOM{
+export class CuahuitlDOM{
 
     validator: Validator;
 

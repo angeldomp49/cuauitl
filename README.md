@@ -118,3 +118,17 @@ As you can see the information is the min and max width in pixels. Also the name
     if(viewport.currentBreakpoint().name == "small"){
         console.log("this is mobile");
     }
+
+## ClassListWrapper ##
+
+It simply serves as a wrapper for a class list without a target object.
+
+Constructor:
+
+    new ClassListWrapper( str: string );
+
+Methods:
+
+    classList(): DOMTokenList;
+
+Returns a class list built from the specific string.
